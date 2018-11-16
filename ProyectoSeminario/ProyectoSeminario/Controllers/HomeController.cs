@@ -14,22 +14,19 @@ namespace ProyectoSeminario.Controllers
         {
             return View();
         }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Aqui puede contactarnos.";
 
             return View();
         }
 
-        public IActionResult Privacy()
+     
+        public IActionResult Consolas()
+        {
+            return View();
+        }
+        public IActionResult Juegos()
         {
             return View();
         }

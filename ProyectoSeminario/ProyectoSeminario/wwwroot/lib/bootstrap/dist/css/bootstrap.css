@@ -27,7 +27,12 @@ section,
 summary {
   display: block;
 }
+.consolas {
+    width: 200px;
+    height: 200px;
+}
 audio,
+
 canvas,
 progress,
 video {

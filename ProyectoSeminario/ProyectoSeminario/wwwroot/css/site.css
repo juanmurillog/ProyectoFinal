@@ -35,3 +35,21 @@ body {
         display: none;
     }
 }
+
+.retraso-1 {
+    
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.retraso-2 {   
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.fondo {
+    background-color: #303F9F;
+    color: white;
+}
+.allerta {
+    font-family: 'Allerta Stencil', sans-serif;
+}
