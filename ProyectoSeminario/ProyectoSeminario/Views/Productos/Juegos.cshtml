@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "VIDEOJUEGOS";
+}
+
+<h1 style="font-family : cursive" class="animated flip">@ViewData["Title"]</h1>
+
+<div class="row">
+
+    <div class="col-md-3 animated fadeInDown retraso-1 " style="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/pubg.png" class="animated fadeIn retraso-1" height="200" width="150" />
+        <h2><button type="button" class="btn btn-primary producto" precio="100000" titulo="Pubg">COMPRAR</button></h2>
+        <strong style=" color:#212121">$100.000</strong>
+    </div>
+    <div class="col-md-3 animated fadeInDown retraso-1 " style="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/fortnite.jpg" class="animated fadeIn retraso-1 " height="200" width="150" />
+        <h2><button type="button" class="btn btn-primary producto" precio="50000" titulo="Fortnite">Comprar</button></h2>
+        <strong style=" color:#212121">$50.000</strong>
+    </div>
+    <div class="col-md-4 animated fadeInDown retraso-1 " style="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/ofduty.jpg" class=" animated fadeIn retraso-1 " height="200" width="150" />
+        <h2 style="color: #000000"><button type="button" class="btn btn-primary producto" precio="2800000" titulo="CallOfDuty">Comprar</button></h2>
+        <strong style=" color:#212121">$280.000</strong>
+    </div>
+
+</div>
+<div class="row">
+
+    <div class="col-md-3 animated fadeInDown retraso-2 " style="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/Godwar.jpg" class="animated fadeIn retraso-1" height="200" width="150" />
+        <h2 style="color:#000000" class="allerta"><button type="button" class="btn btn-primary producto" precio="2000000" titulo="GodOfWar">Comprar</button></h2>
+        <strong style=" color:#212121">$200.000</strong>
+    </div>
+    <div class="col-md-3 animated fadeInDown retraso-2  " style="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/Gears.jpg" class="animated fadeIn retraso-1 " height="200" width="150" />
+        <h2 style="color:#000000" class="allerta"><button type="button" class="btn btn-primary producto" precio="300000" titulo="GearsOFwar">Comprar</button></h2>
+        <strong style=" color:#212121">$300.000</strong>
+    </div>
+    <div class="col-md-3 animated fadeInDown retraso-2  " style ="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/farcry.jpg" class=" animated fadeIn retraso-1 " height="200" width="150" />
+        <h2 style="color: #000000"> <button type="button" class="btn btn-primary producto" precio="110000" titulo="FarCry">Comprar</button></h2>
+        <strong style=" color:#212121">$110.000</strong>
+    </div>
+
+</div>
+<div class="row">
+
+    <div class="col-md-3 animated fadeInDown retraso-3  " style="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/ghostrecon.jpg" class="animated fadeIn retraso-1" height="200" width="150" />
+        <h2 style="color:#000000" class="allerta"><button type="button" class="btn btn-primary producto" precio="2800000" titulo="GhostRecon">Comprar</button></h2>
+        <strong style=" color:#212121">$280.000</strong>
+    </div>
+    <div class="col-md-3 animated fadeInDown retraso-3  " style="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/dbz.jpg" class="animated fadeIn retraso-1 " height="200" width="150" />
+        <h2 style="color:#000000" class="allerta"> <button type="button" class="btn btn-primary producto" precio="70000" titulo="DBZ">Comprar</button></h2>
+        <strong style=" color:#212121">$70.000</strong>
+    </div>
+    <div class="col-md-3 animated fadeInDown retraso-3 " style="font-family:cursive;margin-top:100px;margin-right:30px">
+        <img src="~/images/Juegos/destinity.jpg" class=" animated fadeIn retraso-1 " height="200" width="150" />
+        <h2 style="color: #000000"> <button type="button" class="btn btn-primary producto" precio="250000" titulo="Destinity"> Comprar</button></h2>
+        <strong style=" color:#212121">$250.000</strong>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/minicart.min.js"></script>
+<script src="minicart.js"></script>
+<script>
+    // configuración inicial del carrito
+    paypal.minicart.render(
+        {
+            strings: {
+                button: 'Pagar'
+                , buttonAlt: "Total"
+                , subtotal: 'Total:'
+                , empty: 'No hay productos en el carrito'
+            }
+        });
+    // Eventos para agregar productos al carrito
+    $('#viewcart').click(function (e) {
+        e.stopPropagation();
+        paypal.minicart.view.show();
+    });
+    $('.producto').click(function (e) {
+        e.stopPropagation();
+        paypal.minicart.cart.add({
+            business: 'uhperezoscar@gmail.com', // Cuenta paypal para recibir el dinero
+            item_name: $(this).attr("titulo"),
+            amount: $(this).attr("precio"),
+            currency_code: 'USD',
+
+        });
+    });
+</script>

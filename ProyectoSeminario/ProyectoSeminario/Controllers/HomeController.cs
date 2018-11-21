@@ -21,15 +21,8 @@ namespace ProyectoSeminario.Controllers
             return View();
         }
 
-     
-        public IActionResult Consolas()
-        {
-            return View();
-        }
-        public IActionResult Juegos()
-        {
-            return View();
-        }
+
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

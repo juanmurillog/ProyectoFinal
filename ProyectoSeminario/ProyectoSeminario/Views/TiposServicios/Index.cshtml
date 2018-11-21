@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Definitivo.Models.Basedb.TipoServicio>
+
+@{
+    ViewData["Title"] = "Tipos de servicios";
+}
+
+<h2>Tipos de servicios</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreTipoServicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionTipoServicio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreTipoServicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionTipoServicio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TipoServicioId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TipoServicioId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TipoServicioId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

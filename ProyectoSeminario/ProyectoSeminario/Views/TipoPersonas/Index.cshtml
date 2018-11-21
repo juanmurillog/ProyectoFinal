@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Definitivo.Models.Basedb.TipoPersona>
+
+@{
+    ViewData["Title"] = "Tipos de persona";
+}
+
+<h2>Tipos de Persona</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreTipoPersona)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreTipoPersona)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TipoPersonaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TipoPersonaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TipoPersonaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

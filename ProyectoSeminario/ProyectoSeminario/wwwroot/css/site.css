@@ -8,8 +8,8 @@ body {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Carousel */
@@ -45,6 +45,10 @@ body {
 .retraso-2 {   
     -moz-animation-delay: 2s;
     animation-delay: 2s;
+}
+.retraso-3{
+    -moz-animation-delay: 3s;
+    animation-delay: 3s;
 }
 .fondo {
     background-color: #303F9F;

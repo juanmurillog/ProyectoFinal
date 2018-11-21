@@ -6,7 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home\Alquiler.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Home\About.cshtml" />
+    <Content Remove="Views\Home\Alquiler.cshtml" />
     <Content Remove="Views\Home\Privacy.cshtml" />
   </ItemGroup>
 

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Definitivo.Models.Basedb.TipoProducto>
+
+@{
+    ViewData["Title"] = "Tipos de Productos";
+}
+
+<h2>Tipos de Productos</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreTipoProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionTipoProducto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreTipoProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionTipoProducto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TipoProductoId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TipoProductoId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TipoProductoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

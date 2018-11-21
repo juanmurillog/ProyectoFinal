@@ -1,37 +1,23 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
-        <div class="item active">
-            <img src="~/images/Juegos/pj/ps2.png" alt="ASP.NET" class="animated fadeIn retraso-1" height="800" width="800" />
+        <div class="item active" style="text-align:center">
+            <img src="~/images/Juegos/pj/ps2.png" alt="ASP.NET" class="animated fadeIn retraso-1" height="900" width="900" />
             <div class="carousel-caption" role="option">
               
             </div>
         </div>       
-    <div>
-        <strong style="color:#000000;font-family:cursive;font-size:large">"Dicen que el dinero no puede comprar la felicidad... 
-                                                           pero si te puede ayudar a conseguir una consola" </strong>
-
+    <div class="animated slideInLeft" style="text-align:center">
+        <strong style="color:#000000;font-family:cursive;font-size:20px" >"Dicen que el dinero no puede comprar la felicidad,
+                                                           pero si  una consola ..." </strong>
+        
     </div>
 <hr />
 <div class="row">
-    <div class="col-md-3 animated fadeInDown retraso-2 " style="font-family:cursive">
-        <h2 style="color:#000000">Ejercicio</h2>    
-        <p style=" color:#212121">
-           
-        </p>
-    </div>
-    <div class="col-md-3 animated fadeInDown retraso-2 "style = "font-family:cursive">
-        <h2 style="color:#000000">Abstracto</h2> 
-        <p>
-            
 
-        </p>
-    </div>
-    <div class="col-md-3  animated fadeInDown retraso-2 "style="font-family:cursive">
-        <h2 style="color: #000000">Sedentarismo</h2>   
-        <p>
-           
-        </p>
-    </div>
-   
+    <h2> <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-danger btn-lg btn-block animated fadeInDown retraso-1"><strong>Ingresa !!</strong></a></h2>
+    <h2> <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-danger btn-lg btn-block animated fadeInDown retraso-1"><strong>Registrate !!</strong></a></h2>
+    <p style="color:#2C67C7;font-family:cursive;text-align:center"><strong>¿No te has registrado ? Registrate!!</strong></p>
+
+
 </div>

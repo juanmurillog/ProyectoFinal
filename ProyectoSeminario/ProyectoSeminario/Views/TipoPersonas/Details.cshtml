@@ -1,0 +1,24 @@
+﻿@model Definitivo.Models.Basedb.TipoPersona
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>TipoPersona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreTipoPersona)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NombreTipoPersona)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TipoPersonaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

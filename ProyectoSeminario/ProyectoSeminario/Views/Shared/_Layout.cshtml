@@ -32,15 +32,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style=" color : #C5CAE9 ;font-family:'Century Gothic'">GAMESGTRJ</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style=" color : #000000 ;font-family:cursive"><strong>GAMESGTRJ</strong></a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index" style=" color : #C5CAE9 ;font-family:'Century Gothic'">Inicio</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Juegos" style=" color : #C5CAE9 ;font-family:'Century Gothic'">Juegos </a></li>             
-                   <li><a asp-area="" asp-controller="Home" asp-action="Consolas" style=" color : #C5CAE9 ;font-family:'Century Gothic'">Consolas</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" style=" color : #C5CAE9 ;font-family:'Century Gothic'">Contacto</a></li>
-
+                <ul class="nav navbar-nav">                                
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -52,8 +47,12 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2018 - ProyectoSeminario</p>
+        <footer style="display:block">
+
+
+            <p style="font-family:cursive"><img src="~/images/Juegos/pj/ps2.png" height="30" width="30" alt="Logo GTRJ" />&copy; 2018 - GamesGTRJ</p>   
+            <p style="font-family:cursive">Venta y alquiler de consolas</p>
+
         </footer>
     </div>
 
@@ -61,6 +60,7 @@
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
+
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
@@ -76,7 +76,12 @@
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+        <script src="~/js/bootstrap.min.js"></script>
     </environment>
+
+  
+    
 
     @RenderSection("Scripts", required: false)
 </body>
